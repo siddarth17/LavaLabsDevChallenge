@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
+
+.menu {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 20vw;
+    background-color: #ededed;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #cbcbcb;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.menu-logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 55px;
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 55px;
+}
+
+.menu ul {
+    list-style: none;
+    margin-left: -15px;
+}
+
+.menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    width: 202px;  /* Keep the width consistent */
+    height: 44px;  /* Fixed height */
+    gap: 8px;  /* Space between icon and text */
+    border-radius: 5px;  /* Fully rounded corners */
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;  /* Font weight */
+    font-size: 16px;  /* Font size */
+    color: #34347b;
+    background-color: transparent;  /* Default background */
+    justify-content: flex-start;
+    transition: background-color 0.3s ease;
+    padding-left: 40px;  /* Move the content (text and icon) to the right */
+    margin-bottom: 10px;
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Active menu item */
+.menu li.active {
+    background-color: #C1C1D08C;
+    border-radius: 5px;  /* Rounded corners */
+    padding-left: 30px;  /* Padding for the active state */
+}
+
+/* Remove the pseudo-element highlight */
+.menu li.active::before {
+    display: none;
+}
+
+.menu li:hover {
+    background-color: #C1C1D08C;  /* Same hover color */
+}
+
+.menu li span {
+    display: inline-block;
+    margin-left: 0;  /* Keep text consistently aligned */
+    transition: color 0.3s ease;  /* Smooth color transition */
+}
+
+.menu li.active span {
+    color: #34347b;  /* Text color remains consistent */
+}
+
+.menu li.active, .menu li {
+    padding: 0 10px;  /* Same padding for both active and inactive states */
+}
+
+.new-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 225px;
+    height: 40px;
+    background-color: #34347B;  /* Button color */
+    color: white;  /* White text */
+    border: none;
+    border-radius: 8px 8px 8px 8px;  /* Rounded top-left corner */
+    padding: 8px 20px;
+    gap: 12px;
+    position: absolute;
+    bottom: 50px;  /* Position it at the bottom */
+    left: 40px;  /* Align with the left as requested */
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.new-button:hover {
+    background-color: #2e2d6b;  /* Slightly darker color on hover */
+}
+
+.modal {
+    background-color: white;
+    padding: 20px;
+    max-width: 600px;  /* Increase this value to make the modal wider */
+    width: 100%;  /* Ensure it takes full width up to the max-width */
+    margin: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    font-family: 'Manrope', sans-serif;
+}
+
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.75); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #34347B; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.modal label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.modal input, .modal select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #cbcbcb;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+.modal input:focus, .modal select:focus {
+    outline: none;
+    border-color: #34347B;
+    box-shadow: 0 0 5px rgba(52, 52, 123, 0.2); 
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+}
+
+.modal-buttons button {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.modal-buttons button:first-child {
+    background-color: #34347B; 
+    color: white;
+}
+
+.modal-buttons button:first-child:hover {
+    background-color: #2e2d6b; 
+}
+
+.modal-buttons button:last-child {
+    background-color: #ccc; 
+    color: #000;
+}
+
+.modal-buttons button:last-child:hover {
+    background-color: #bbb; 
+}
+
+.modal .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #34347B; 
+    transition: color 0.3s ease;
+}
+
+.modal .close-modal:hover {
+    color: #2e2d6b; 
+}
